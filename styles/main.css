@@ -13,6 +13,7 @@
     --secondary-blue: #1a9af7;
     --soft-blue: #e7f5ff;
     --warm-black: #201e1c;
+    --warm-black-2: #282623;
     --black: #282623;
     --grey: #bababa;
     --off-white: #faf8f7;
@@ -293,4 +294,97 @@ main{
 
 .commission__table--date{
     background-color: var(--soft-blue);
+}
+
+/* seccion features */
+.main__features--container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 64px;
+    width: 100%;
+    background-color: var(--warm-black);
+}
+
+.main__features--container .batata-icon{
+    width: 40.57px;
+    height: 24.01px;
+    position: relative;
+    top: -11px;
+    
+}
+
+.main__features--title{
+    width: 90%;
+    margin-top: 64px;
+    text-align: center;
+}
+
+.main__features--title h2{
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--just-white);
+}
+
+.main__features--title p{
+    margin-top: 24px;
+}
+
+.features__cards--container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 32px;
+}
+
+.main__features--container p{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
+}
+
+.features__cards--item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 16px 16px 8px 16px;
+    width: 100%;
+    height: 152px;
+    padding: 20px;
+    background-color: var(--warm-black-2);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.16);;
+}
+
+.features__cards--item span{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.features__cards--item .clock-icon{
+    background-image: url('../assets/icons/clock.svg');
+}
+
+.features__cards--item .eye-icon{
+    background-image: url('../assets/icons/eye.svg');
+}
+
+.features__cards--item .dollar-sign-icon{
+    background-image: url('../assets/icons/dollar-sign.svg');
+}
+
+.features__cards--item .check-circle-icon{
+    background-image: url('../assets/icons/check-circle.svg');
+}
+
+.features__cards--item h2{
+    font-size: 1.8rem;
+    line-height: 1.8rem;
+    font-weight: bold;
+    color: var(--just-white);
 }
