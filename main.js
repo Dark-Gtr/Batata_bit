@@ -1,9 +1,9 @@
-setTimeout(() => {
+/* setTimeout(() => {
     document.querySelector(".currency__table--container").scrollIntoView({
         behavior: "smooth",
         block: "center"
     })
-}, 500)
+}, 500) */
 
 /* Funcion para centrar flecha next-table */
 const centerArrow = () => {
