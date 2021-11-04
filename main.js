@@ -1,20 +1,9 @@
-/* setTimeout(() => {
-    document.querySelector(".currency__table--container").scrollIntoView({
+/* setInterval(() => {
+    document.querySelector('footer').scrollIntoView({
         behavior: "smooth",
         block: "center"
     })
-}, 500) */
-
-/* Funcion para centrar flecha next-table */
-const centerArrow = () => {
-    const container = document.querySelector('body');
-    const buttonArrow = document.querySelector('.next-table');
-    
-    console.log(buttonArrow.clientWidth);
-    buttonArrow.style.left = `${(container.clientWidth - buttonArrow.clientWidth) - 23}px`;
-}
-
-centerArrow()
+}, 1000); */
 
 /* Funcion para el slider de las tablas */
 const sliderTables = () => {
@@ -23,7 +12,6 @@ const sliderTables = () => {
     const container = document.querySelector('.main-tables__container')
 
     let slidecount = 1;
-    console.log(container.childElementCount);
     buttonArrow.onclick = () => {
         const slider = document.querySelector('.main-tables__container')
         if (slidecount != container.childElementCount) {
@@ -39,4 +27,34 @@ const sliderTables = () => {
     }
 }
 
+const sliderPlans = () => {
+    const buttonLeft = document.querySelector('.plans__button--left');
+    const buttonRight = document.querySelector('.plans__button--right')
+    const container = document.querySelector('.main-plans__cards--container')
+    
+    const limit = container.childElementCount;
+    let currentSlid = -100;
+    let countSlid = 2;
+    container.style.transform = `translate(${currentSlid}vw,0px)`
+
+    buttonLeft.onclick = () => {
+        if (countSlid < limit) {
+            countSlid++;
+            currentSlid += (1 * 100);
+            container.style.transform = `translate(${currentSlid}vw, 0px)`
+        }
+        
+    }
+
+    buttonRight.onclick = () => {
+        if (countSlid > 1) {
+            countSlid--;
+            currentSlid += -(1 * 100);
+            container.style.transform = `translate(${currentSlid}vw, 0px)`
+        }
+        
+    }
+}
+
 sliderTables()
+sliderPlans()
