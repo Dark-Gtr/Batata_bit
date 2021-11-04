@@ -1,9 +1,13 @@
-/* setInterval(() => {
-    document.querySelector('footer').scrollIntoView({
+/* Función para hacer scroll asta la seccion de planes */
+document.querySelector('.header__button').addEventListener('click', function(){
+    const plans = document.querySelector('.main__plans--container');
+    setTimeout(() => {
+        plans.scrollIntoView({
         behavior: "smooth",
         block: "center"
-    })
-}, 1000); */
+        })
+    }, 1)
+})
 
 /* Funcion para el slider de las tablas */
 const sliderTables = () => {
