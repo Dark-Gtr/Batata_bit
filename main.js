@@ -33,35 +33,38 @@ const sliderTables = () => {
 
 const sliderPlans = () => {
     const buttonLeft = document.querySelector('.plans__button--left');
-    const buttonRight = document.querySelector('.plans__button--right')
-    const container = document.querySelector('.main-plans__cards--container')
+    const buttonRight = document.querySelector('.plans__button--right');
+    const container = document.querySelector('.main-plans__cards--container');
+    const body = document.querySelector('body');
     
-    const limit = container.childElementCount;
-    let currentSlid = -100;
-    let countSlid = 2;
-    container.style.transform = `translate(${currentSlid}vw,0px)`
-    buttonLeft.onclick = () => {
-        if (countSlid < limit) {
-            countSlid++;
-            currentSlid += (1 * 100);
-            container.style.transform = `translate(${currentSlid}vw, 0px)`;
-            buttonRight.style.visibility = 'visible';
+    if (body.clientWidth < 930) {
+        const limit = container.childElementCount;
+        let currentSlid = -100;
+        let countSlid = 2;
+        container.style.transform = `translate(${currentSlid}vw,0px)`
+        buttonLeft.onclick = () => {
+            if (countSlid < limit) {
+                countSlid++;
+                currentSlid += (1 * 100);
+                container.style.transform = `translate(${currentSlid}vw, 0px)`;
+                buttonRight.style.visibility = 'visible';
+            }
+            if (countSlid === limit) {
+                buttonLeft.style.visibility = 'hidden';
+            }
         }
-        if (countSlid === limit) {
-            buttonLeft.style.visibility = 'hidden';
-        }
-    }
 
-    buttonRight.onclick = () => {
-        if (countSlid > 1) {
-            countSlid--;
-            currentSlid += -(1 * 100);
-            container.style.transform = `translate(${currentSlid}vw, 0px)`;
-            buttonLeft.style.visibility = 'visible';
-        }
-        
-        if (countSlid == 1) {
-            buttonRight.style.visibility = 'hidden';
+        buttonRight.onclick = () => {
+            if (countSlid > 1) {
+                countSlid--;
+                currentSlid += -(1 * 100);
+                container.style.transform = `translate(${currentSlid}vw, 0px)`;
+                buttonLeft.style.visibility = 'visible';
+            }
+            
+            if (countSlid == 1) {
+                buttonRight.style.visibility = 'hidden';
+            }
         }
     }
 }

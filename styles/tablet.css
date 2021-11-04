@@ -1,0 +1,25 @@
+.slider__tables--container .next-table{
+    visibility: collapse;
+}
+
+.main-tables__container{
+    width: 100vw;
+}
+
+.features__cards--container .features__cards--item{
+    width: 45vw;
+}
+
+.main-plans__cards--container{
+    width: 100%;
+    justify-content: center;
+    transform: translate(0px,0px);
+}
+
+.main-plans__cards--container .plans__cards--item{
+    margin: 0 5px;
+}
+
+.plans-slide__button{
+    visibility: collapse;
+}
