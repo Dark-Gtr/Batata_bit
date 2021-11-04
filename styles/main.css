@@ -443,6 +443,7 @@ main{
     background-color: transparent;
     border: none;
     z-index: 2;
+    transition: visibility 0.5s;
 }
 
 .plans__button--left{

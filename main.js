@@ -36,23 +36,29 @@ const sliderPlans = () => {
     let currentSlid = -100;
     let countSlid = 2;
     container.style.transform = `translate(${currentSlid}vw,0px)`
-
     buttonLeft.onclick = () => {
         if (countSlid < limit) {
             countSlid++;
             currentSlid += (1 * 100);
-            container.style.transform = `translate(${currentSlid}vw, 0px)`
+            container.style.transform = `translate(${currentSlid}vw, 0px)`;
+            buttonRight.style.visibility = 'visible';
         }
-        
+        if (countSlid === limit) {
+            buttonLeft.style.visibility = 'hidden';
+        }
     }
 
     buttonRight.onclick = () => {
         if (countSlid > 1) {
             countSlid--;
             currentSlid += -(1 * 100);
-            container.style.transform = `translate(${currentSlid}vw, 0px)`
+            container.style.transform = `translate(${currentSlid}vw, 0px)`;
+            buttonLeft.style.visibility = 'visible';
         }
         
+        if (countSlid == 1) {
+            buttonRight.style.visibility = 'hidden';
+        }
     }
 }
 
